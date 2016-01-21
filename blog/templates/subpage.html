@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title%}
+博客详情
+{% endblock%}
+
+
+{% block content %}
+<div id="templatemo_content_panel">
+	<div id="templatemo_content">
+
+
+       <div id="templatemo_content_right">
+           <div class="templatemo_post_section">
+            <div class="date_section">
+               19<span>OCT</span>                   
+           </div>
+           <div class="post_content">                	
+            <div class="post_title">
+
+            
+           <h1>{{article.title}}</h1>
+                <div class="post_info">
+                作者 <a href="#" target="_parent">张三</a> <a href="#"><span class="comment">512 评论</span></a></div>
+               </div>
+
+           <div class="post_body">
+            <img src="{% static 'images/templatemo_image_01.jpg' %}" alt="image" />
+            <p>{{ article.content }}</p>
+        </div>  
+
+
+        <div class="comment_section">
+           <div class="comment_section_title">评论区</div>
+           <div class="comment_box">
+            <div class="comment_title">1. 有意思</div>
+            <div class="comment_body">
+                哈哈哈的可能是建安费立刻就的斯洛伐克绝对是你坑防静电索拉卡
+            </div>
+        </div>
+        <div class="comment_box">
+            <div class="comment_title">2. 这是评论2</div>
+            <div class="comment_body">
+                发顺丰就我看那的解法看男未交费冷酷无情饥饿你看
+            </div>
+        </div>
+    </div>
+
+    <div class="leave_comment_section">
+       <div class="leave_comment_section_title">添加评论</div>
+       <form action="#" method="get">
+           <div class="form_row">
+            <label>昵称 ( 必填 )</label><br />
+            <input type="text" name="fullname" id="fullname" />
+        </div>
+        <div class="form_row">
+            <label>邮箱  (必填 , 不会显示)</label><br />
+            <input type="text" name="email" id="email" />
+        </div>
+        <div class="form_row">
+            <label>评论内容</label><br />
+            <textarea  name="comment"></textarea>
+        </div>
+        <input type="submit" name="Submit" value="提交" class="submit_btn" />
+    </form>
+
+</div>                  
+</div>
+
+
+
+</div> <!-- end of 1 post -->
+
+<div class="cleaner_with_height">&nbsp;</div>
+
+
+
+
+</div> <!-- end of content right -->
+
+<div class="cleaner_with_height">&nbsp;</div>
+}
+</div>
+</div> <!-- end of content panel -->
+{% endblock %}

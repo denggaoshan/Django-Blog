@@ -1,0 +1,81 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% load staticfiles %}
+
+
+<div id="templatemo_content">
+
+    <div id="templatemo_content_left">
+        <div class="templatemo_content_left_section">
+            <div class="left_section_title">最近文章</div>
+            <div class="left_section_content">
+                <ul>
+                 {% for article in articles_5 %}
+                    <li><a href="{% url 'detail' article.id %}">{{ article.title }}</a></li>
+                {% endfor%}
+                </ul>
+            </div>
+        </div>
+
+        <div class="templatemo_content_left_section">
+            <div class="left_section_title">热门分类</div>
+            <div class="left_section_content">
+                <ul>
+                    <li><a href="#">分类1</a></li>
+                    <li><a href="#">分类2</a></li>
+                    <li><a href="#">分类3</a></li>
+                    <li><a href="#">分类4</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="templatemo_content_left_section">
+            <div class="left_section_title">照片墙</div>
+            <div class="left_section_content">
+                <ul class="gallery">
+                    <li><a href="#"><img src="{% static 'images/templatemo_thumb_01.jpg' %}" alt="image name" /></a></li>
+                    <li><a href="#"><img src="{% static 'images/templatemo_thumb_02.jpg' %}" alt="image name" /></a></li>
+                    <li><a href="#"><img src="{% static 'images/templatemo_thumb_03.jpg' %}" alt="image name" /></a></li>
+                    <li><a href="http://www.templatemo.com" target="_blank"><img src="{% static 'images/templatemo_thumb_04.jpg' %}" alt="Free Template" /></a></li>
+                    <li><a href="http://www.flashmo.com" target="_blank"><img src="{% static 'images/templatemo_thumb_05.jpg' %}" alt="Flash Resources" /></a></li>
+                    <li><a href="http://www.webdesignmo.com" target="_blank"><img src="{% static 'images/templatemo_thumb_06.jpg' %}" alt="Web Design" /></a></li>
+                </ul>
+                <div class="cleaner">&nbsp;</div>
+                <br />
+                <a href="#">查看所有</a>
+            </div>
+        </div>
+    </div> <!-- end of content left -->
+
+
+    <div id="templatemo_content_right">
+
+       {% for article in articles_2 %}
+       <div class="templatemo_post_section">
+        <div class="date_section">
+            19<span>OCT</span>                   
+        </div>
+        <div class="post_content"> 
+            <a href="{% url 'detail' article.id %}">            
+            <div class="post_title">
+               
+                <h1>{{article.title}}</h1>
+                <div class="post_info">
+                作者 <a href="#" target="_parent">张三</a> <a href="#"><span class="comment">512 评论</span></a></div>
+               </div>
+
+               <div class="post_body_single">
+                <img src="{% static 'images/templatemo_image_01.jpg' %}" alt="image" />
+                <p>{{ article.content }}</p>
+            </div>  
+            </a>                  
+        </div>
+    </div> <!-- end of 1 post -->
+
+    <div class="cleaner_with_height">&nbsp;</div>
+    {% endfor %}
+
+</div>
+{% endblock%}

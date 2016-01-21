@@ -1,0 +1,85 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="paint blog, free templates, website templates, CSS, HTML" />
+    <meta name="description" content="Paint Blog - free blog website template provided by templatemo.com" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+
+<body>
+
+{% block header %}
+<div id="templatemo_top_panel">
+    <div id="templatemo_header_section">
+        <div id="search_box">
+            <form method="get" action="#">
+                <input type="text" name="searchfield" id="search_field" title="searchfield" />
+                <input type="submit" name="search" value="" alt="Search" id="search_button" title="Search" />
+            </form>
+        </div>
+    </div> <!-- end of header -->
+</div>
+{% endblock %}    
+
+{% block menu%}
+<div id="templatemo_menu_panel">
+    <div id="templatemo_menu_section">
+        <ul>
+            <li><a href="/index/" class="current">主 页</a></li>
+            <li><a href="/information/">个人资料</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">图片</a></li>  
+            <li><a href="#">讨论区</a></li> 
+            <li><a href="#" class="lastmenu">联系我</a></li>                     
+        </ul> 
+    </div>
+</div> <!-- end of menu -->
+{% endblock %}
+
+<div id="templatemo_content_panel">
+{% block content %}{% endblock %}
+</div> 
+
+{% block bottom %}
+<div id="templatemo_bottom_panel">
+    <div id="templatemo_bottom_section">
+    
+        <div id="templatemo_bottom_section_left">
+            <div class="bottom_section_title">网站最新动态</div>
+            <ul class="popular_post">   
+                <li><a href="#">创建了首页</a><br/>作者 - Jan 21, 2016  </li>
+               
+            </ul>
+        </div>
+        
+        <div id="templatemo_bottom_section_right">
+            <div class="bottom_section_title">友情链接</div>
+            <ul class="list_section">
+                <li><a href="https://www.djangoproject.com/">Django官网</a></li>
+                <li><a href="#">Python 教程</a></li>
+            </ul>
+            <p>这个网站是用Django来做的，主要是用来学习，并且自己摸索。</p>
+                <a href="http://validator.w3.org/check?uri=referer"><img style="border:0;width:88px;height:31px" src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" width="88" height="31" vspace="8" border="0" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px"  src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" vspace="8" border="0" /></a> 
+        </div>    
+    </div>
+</div> <!-- end of bottom panel -->
+{% endblock %}
+
+{% block footer%}
+<div id="templatemo_footer_panel">
+    <div id="templatemo_footer_section">
+        Copyright © 2048 <a href="#">Your Company Name</a> | 
+        <a href="http://www.iwebsitetemplate.com" target="_parent">Website Templates</a> by 
+        <a href="http://www.templatemo.com" target="_parent">Free CSS Templates</a>
+    </div>
+</div>
+<!--  Free CSS Template is designed by templatemo.com  -->
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+{% endblock %}
+</body>
+</html>
